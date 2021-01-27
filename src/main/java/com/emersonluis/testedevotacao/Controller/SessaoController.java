@@ -49,10 +49,10 @@ public class SessaoController {
 	}
 	
 	@PostMapping
-	public Sessao create(@RequestBody Sessao sessao) {
-
-			return repository.save(sessao);
-
-	}
+	public Sessao create(@RequestBody Sessao sessao){
+		
+		   return repository.save(sessao);
+		   
+		}
 
 }

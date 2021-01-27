@@ -1,6 +1,7 @@
 package com.emersonluis.testedevotacao.repository;
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
@@ -23,14 +24,17 @@ public class AssociadoRepositoryTest {
 private AssociadoRepository repository;
 	
 
-	
-
 	@Test
-	public void TestarCadastroDeAssociado() {
-		Optional<Associado> associado = repository.findById(3);
+	public void TestarCadastroDeAssociadoConformeId() {
+		Optional<Associado> associado = repository.findById((long) 3);
 		assertThat(associado.get().getNome().equals("Emerson"));
 	}
 	
+	@Test
+	public void TetarBuscaPorNomeNoBancoDeDados() {
+		List<Associado> associado = repository.findByNomeContaining("Emer");
+		assertThat(associado.size()).isEqualTo(3);
+	}
 	
 	
 }

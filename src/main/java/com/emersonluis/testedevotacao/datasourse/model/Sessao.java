@@ -22,7 +22,7 @@ public class Sessao {
 	private Long id;
 	
 	
-	private Long idContact;
+	private Long idAssociado;
 	
 	private Long idPauta;
 	

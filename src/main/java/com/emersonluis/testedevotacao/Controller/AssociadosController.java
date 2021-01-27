@@ -38,6 +38,13 @@ public class AssociadosController {
 	   return repository.save(contact);
 	}
 	
+	@GetMapping(path = {"/{id}"})
+	public ResponseEntity<?> findById(@PathVariable long id){
+	   return repository.findById(id)
+	           .map(record -> ResponseEntity.ok().body(record))
+	           .orElse(ResponseEntity.notFound().build());
+	}
+	
 	@PutMapping(value="/{id}")
 	public ResponseEntity<Associado> update(@PathVariable("id") long id,
 	                                      @RequestBody Associado contact) {
