@@ -25,6 +25,6 @@ public class Pauta implements Serializable{
 	private Long id;
 	
 	private String pauta;
-	private Long idContact;
+	private Long idAssociado;
 	
 }

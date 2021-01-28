@@ -30,7 +30,7 @@ public class SessaoRepositoryTest {
 	
 	@Test
 	public void TestarCadastroDeSessaoConformeRespostaForNao() {
-		Optional<Sessao> sessao = repository.findById((long) 2);
+		Optional<Sessao> sessao = repository.findById((long) 3);
 		assertThat(sessao.get().getResposta().equals("Nao"));
 	}
 	

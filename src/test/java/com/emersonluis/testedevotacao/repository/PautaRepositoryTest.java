@@ -31,7 +31,7 @@ public class PautaRepositoryTest {
 	@Test
 	public void TestarCadastroDePautaConformeIdPorIdAssociado() {
 		Optional<Pauta> pauta = repository.findById((long) 7);
-		assertThat(pauta.get().getIdContact().equals(1));
+		assertThat(pauta.get().getIdAssociado().equals(1));
 	}
 	
 	
